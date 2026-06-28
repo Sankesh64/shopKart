@@ -18,13 +18,13 @@
 ## 📸 Screenshots
 
 ### Hero — Summer Essence Collection
-![ShopKart Hero](./screenshot1.png)
+![ShopKart Hero](./src/assets/images/product-sneakers.jpg)
 
 ### Trending Now
-![ShopKart Trending](./screenshot2.png)
+![ShopKart Trending](./src/assets/images/product-totebag.jpg)
 
 ### New Arrivals & Gift Wrapping
-![ShopKart New Arrivals](./screenshot3.png)
+![ShopKart New Arrivals](./src/assets/images/banner-sale.jpg)
 
 ---
 
