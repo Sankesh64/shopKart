@@ -190,7 +190,7 @@ export default function Checkout() {
             <div className="flex flex-col gap-sm mb-md">
               <div className="flex justify-between items-center">
                 <span className="text-on-surface-variant font-body-sm">Subtotal</span>
-                <span className="font-bold">$844.00</span>
+                <span className="font-bold">₹70,400.00</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-on-surface-variant font-body-sm">Shipping</span>
@@ -198,12 +198,12 @@ export default function Checkout() {
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-on-surface-variant font-body-sm">Tax</span>
-                <span className="font-bold">$42.20</span>
+                <span className="font-bold">₹3,520.00</span>
               </div>
             </div>
             <div className="border-t border-outline-variant pt-sm flex justify-between items-center mb-lg">
               <span className="font-headline-sm text-headline-sm">Total</span>
-              <span className="font-headline-sm text-headline-sm text-primary">$886.20</span>
+              <span className="font-headline-sm text-headline-sm text-primary">₹73,920.00</span>
             </div>
           </div>
         </div>

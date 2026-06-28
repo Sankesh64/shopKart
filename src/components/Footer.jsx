@@ -24,20 +24,20 @@ export default function Footer() {
 
       <div className="flex flex-col gap-sm">
         <h3 className="font-label-lg text-label-lg text-on-surface font-bold mb-xs">Shop</h3>
-        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Women's Collection</Link>
-        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Men's Collection</Link>
-        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Accessories</Link>
-        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/">New Arrivals</Link>
-        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Sale & Offers</Link>
+        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/shop">Women's Collection</Link>
+        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/shop">Men's Collection</Link>
+        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/shop">Accessories</Link>
+        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/new-arrivals">New Arrivals</Link>
+        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/deals">Sale & Offers</Link>
       </div>
 
       <div className="flex flex-col gap-sm">
         <h3 className="font-label-lg text-label-lg text-on-surface font-bold mb-xs">Customer Care</h3>
-        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Help Center</Link>
-        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Track Your Order</Link>
-        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Returns & Exchanges</Link>
-        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Size Guide</Link>
-        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/">Contact Us</Link>
+        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/orders">Help Center</Link>
+        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/orders">Track Your Order</Link>
+        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/shop">Returns & Exchanges</Link>
+        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/shop">Size Guide</Link>
+        <Link className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" to="/profile">Contact Us</Link>
       </div>
 
       <div className="flex flex-col gap-sm">

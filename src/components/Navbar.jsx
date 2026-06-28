@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React from 'react';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-
+  const navigate = useNavigate();
   const { scrollY } = useScroll();
   const navHeight = useTransform(scrollY, [0, 80], [80, 64]);
   const shadow = useTransform(scrollY, [0, 80], ["0px 0px 0px rgba(0,0,0,0)", "0px 4px 20px rgba(0,0,0,0.08)"]);
+
+  const handleSearchKeyDown = (e) => {
+    if (e.key === 'Enter' && e.target.value.trim()) {
+      navigate(`/search?q=${encodeURIComponent(e.target.value.trim())}`);
+    }
+  };
 
   return (
     <motion.header style={{ height: navHeight, boxShadow: shadow }} className="fixed top-0 left-0 w-full z-50 px-margin-mobile md:px-margin-desktop bg-surface flex items-center">
@@ -22,13 +27,22 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-md">
           <div className="relative hidden lg:block group">
-            <input className="bg-surface-container rounded-full px-lg py-xs border-none focus:ring-2 focus:ring-primary w-64 transition-all" placeholder="Search products..." type="text"/>
+            <input
+              className="bg-surface-container rounded-full px-lg py-xs border-none focus:ring-2 focus:ring-primary w-64 transition-all pl-12"
+              placeholder="Search products..."
+              type="text"
+              onKeyDown={handleSearchKeyDown}
+            />
             <span className="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">search</span>
           </div>
           <div className="flex items-center gap-sm">
-            <button className="p-xs text-secondary hover:text-primary transition-colors"><span className="material-symbols-outlined">favorite</span></button>
-            <button className="p-xs text-secondary hover:text-primary transition-colors"><span className="material-symbols-outlined">person</span></button>
-            <Link to="/cart" className="p-xs text-secondary hover:text-primary transition-colors relative block">
+            <Link to="/wishlist" className="p-xs text-secondary hover:text-primary transition-colors" aria-label="Wishlist">
+              <span className="material-symbols-outlined">favorite</span>
+            </Link>
+            <Link to="/login" className="p-xs text-secondary hover:text-primary transition-colors" aria-label="Account">
+              <span className="material-symbols-outlined">person</span>
+            </Link>
+            <Link to="/cart" className="p-xs text-secondary hover:text-primary transition-colors relative block" aria-label="Cart">
               <span className="material-symbols-outlined">shopping_cart</span>
               <motion.span
                 key="3"
